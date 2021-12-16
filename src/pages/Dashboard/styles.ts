@@ -6,7 +6,7 @@ export const DashboardBackground = styled.main`
     display:flex;
     align-items: center;
     flex-direction: column;
-    background-color: ${({theme}) => theme.colors.backgroundLight};
+    background-color: ${({theme}) => theme.colors.backgroundLight};;
 `
 
 export const BodyContainer = styled.main`
