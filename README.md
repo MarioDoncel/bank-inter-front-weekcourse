@@ -61,6 +61,7 @@ A front end application where the user can log in or register a new account and 
 * [ReactJS](https://pt-br.reactjs.org/)
 * [Styled Components](https://styled-components.com/)
 * [React Router](https://v5.reactrouter.com/web/guides/quick-start)
+* [JWT](https://jwt.io/)
 * Axios
 
 <!-- 
