@@ -24,7 +24,7 @@ const Header = () => {
                   <div>
                       <p>Olá, <span className="primary-color font-bold">{user.firstName} {user.lastName}</span></p>
                       <strong>{user.accountNumber}-{user.accountDigit}</strong><br/>
-                      <a href="#" onClick={handleLogoff}>Sair</a>
+                      <a href="/" onClick={handleLogoff}>Sair</a>
                   </div>
                 </UserInfo>
             </HeaderWrapper>

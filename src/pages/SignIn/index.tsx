@@ -1,5 +1,5 @@
 
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import { Background,ButtonContainer,InputContainer,Wrapper } from './styles'
 
 import background from '../../assets/images/background-login.jpg'
@@ -12,7 +12,6 @@ import Button from '../../components/Button'
 import { Link, useNavigate } from 'react-router-dom'
 
 import useAuth from '../../hooks/useAuth'
-import { signIn } from '../../services/resources/user'
 
 const SignIn = () => {
     const [email, setEmail] = useState('');
@@ -22,13 +21,14 @@ const SignIn = () => {
     const {userSignIn} = useAuth();
 
     const handleToSignIn = async () => {
+        
         const data = {
             email, 
             password
         }
-
+        
         const response = await userSignIn(data)
-
+        
         if (response.id) {
             navigate('/dashboard')
             return

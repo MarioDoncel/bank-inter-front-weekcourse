@@ -1,5 +1,4 @@
-import { AxiosResponse } from 'axios'
-import {createContext, useEffect, useCallback, useState} from 'react'
+import {createContext, useState} from 'react'
 import { SignInData, SignUpData, signIn,signUp,me } from '../services/resources/user'
 
 interface UserDto { 
@@ -35,8 +34,9 @@ export const AuthProvider:React.FC = ({children}) => {
 
 
     const userSignIn = async (userData:SignInData) => {
+        
         const {data} = await signIn(userData)
-
+        console.log(data)
         if(data?.status === 'error'){
             return data
         }
